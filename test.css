@@ -35,6 +35,7 @@ b {
 nav ul {
 	padding: 0;
 	margin: 0;
+	png-alpha: 34;
 	list-style: none;
 	font-size: 1rem;
 	font-weight: 200
@@ -119,6 +120,8 @@ nav li:nth-child(3n+3) a:focus {
   font-weight: normal;
   text-align: center;
   text-shadow: 0 0 5px white;
+	png-alpha: 34;
+	png-alpha: 2;
 }
 
 .banner h1 a {
