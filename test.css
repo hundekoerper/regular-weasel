@@ -84,6 +84,7 @@ nav li:nth-child(3n+1) a:active,
 nav li:nth-child(3n+1) a:focus {
 		border-bottom: 0.3rem solid rgb(25, 94, 25);
 		height: 1.5rem;
+		png-alpha: 34;
 }
 
 nav li:nth-child(3n+2) a:hover,
