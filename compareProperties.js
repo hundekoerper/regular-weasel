@@ -18,23 +18,23 @@ var comepareProperties = function(usedproperties, database, profile) {
     }
   };
 
-for (var i = 0, x = matches.length; i < x ; i++) {
-  for (var j = i + 1; j < x; j++) {
-    if (matches[i][0] === matches[j][0]) {
-      matches[i] = _.union(matches[i], matches[j]);
-      temp.push(j);
+  for (var i = 0, x = matches.length; i < x ; i++) {
+    for (var j = i + 1; j < x; j++) {
+      if (matches[i][0] === matches[j][0]) {
+        matches[i] = _.union(matches[i], matches[j]);
+        temp.push(j);
+      }
     }
   }
-}
 
-temp = _.uniq(temp);
+  temp = _.uniq(temp);
 
-for (var i = 0, x = temp.length; i < x; i++) {
-  delete matches[temp[i]];
-}
+  for (var i = 0, x = temp.length; i < x; i++) {
+    delete matches[temp[i]];
+  }
 
-matches = _.compact(matches);
-temp = [];
+  matches = _.compact(matches);
+  temp = [];
 
 
   if (matches.length === 0){
@@ -48,21 +48,22 @@ temp = [];
     console.log("==================");
     console.log("");
   } else {
-    for(var i = 0, x = matches.length; i < x; i++) {
+    for (var i = 0, x = matches.length; i < x; i++) {
       console.log("==================");
       console.log("You used " + chalk.bold(matches[i][0]) + " at");
-      for(var j = 1, y = matches[i].length; j < y; j++) {
+      for (var j = 1, y = matches[i].length; j < y; j++) {
         temp.push(matches[i][j]);
       }
       console.log("Line: " + temp);
       console.log("==================");
       temp = [];
       if (profile.description === 1) {
-      console.log(database.data[matches[i][0]].title);
-      console.log("");
-      console.log(database.data[matches[i][0]].description);
-      console.log("");
+        console.log(database.data[matches[i][0]].title);
+        console.log("");
+        console.log(database.data[matches[i][0]].description);
+        console.log("");
       }
+      
     }
   }
 
