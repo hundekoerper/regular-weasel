@@ -1,5 +1,5 @@
 {
-  "name": "cuddly-weasel",
+  "name": "weasel",
   "version": "0.0.0",
   "description": "check your css file for compatibility issues with different browsers.",
   "main": "index.js",
