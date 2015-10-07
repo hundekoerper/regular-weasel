@@ -2,13 +2,15 @@ var comepareProperties = function(usedproperties, database, profile) {
 
   var chalk = require('chalk')
   ,   _ = require('underscore')
+  ,   versionConverter = require('./versionConverter')
   ,   browser = []
   ,   matches = []
+  ,   values = {}
   ,   temp = [];
 
   for (var bsr in profile.browsers) {
     if (profile.browsers[bsr] !== 0) {
-      browser.push([bsr, profile.browsers[bsr]]);
+      browser.push(bsr);
     }
   }
 
@@ -36,6 +38,7 @@ var comepareProperties = function(usedproperties, database, profile) {
   matches = _.compact(matches);
   temp = [];
 
+  versionConverter(profile, database);
 
   if (matches.length === 0){
     console.log("==================");
@@ -63,7 +66,11 @@ var comepareProperties = function(usedproperties, database, profile) {
         console.log(database.data[matches[i][0]].description);
         console.log("");
       }
-      
+
+      values = _.pick(database.data[matches[i][0]].stats, browser);
+
+
+
     }
   }
 
