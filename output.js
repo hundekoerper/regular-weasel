@@ -59,17 +59,31 @@ var output = function(versions, values) {
     console.log(chalk.underline(browsername + " compatibilty:"));
     console.log("");
 
-    temp = _.pairs(values[versions[i][0]]);
-    for (var j = 0, y = temp.length; j < y; j++){
-      if (temp[j][0] >= versions[i][1] && temp[j][1] === "y"){
-      console.log("Version " + temp[j][0] + ": " + chalk.green("supported"))
-      } else if (temp[j][0] >= versions[i][1] && temp[j][1] === "n") {
-      console.log("Version " + temp[j][0] + ": " + chalk.red("not supported"));
-      } else if (temp[j][0] >= versions[i][1]) {
-      console.log("Version " + temp[j][0] + ": " + chalk.yellow("partially supported"));
+    switch(versions[i][0]) {
+      case "opera":
+      break;
+      case "ios_saf":
+      break;
+      case "op_mini":
+      break;
+      case "android":
+      break;
+      default:
+      temp = _.pairs(values[versions[i][0]]);
+      for (var j = 0, y = temp.length; j < y; j++){
+        if (temp[j][0] >= versions[i][1] && temp[j][1] === "y"){
+        console.log("Version " + temp[j][0] + ": " + chalk.green("supported"))
+        } else if (temp[j][0] >= versions[i][1] && temp[j][1] === "n") {
+        console.log("Version " + temp[j][0] + ": " + chalk.red("not supported"));
+        } else if (temp[j][0] >= versions[i][1]) {
+        console.log("Version " + temp[j][0] + ": " + chalk.yellow("partially supported"));
+        }
       }
-    }
-    temp = [];
+      temp = [];
+      break;
+
+    };
+
   }
 
   // console.log(values); //for debug

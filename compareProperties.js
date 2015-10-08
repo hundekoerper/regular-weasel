@@ -73,6 +73,19 @@ var comepareProperties = function(usedproperties, database, profile) {
 
       output(versions, values);
 
+
+      console.log("");
+      if (profile.additional_notes === 1) {
+        console.log(chalk.underline("Additional Notes:"));
+        console.log("");
+        console.log(database.data[matches[i][0]].notes);
+        console.log("");
+
+        for (var value in database.data[matches[i][0]].notes_by_num){
+          console.log(database.data[matches[i][0]].notes_by_num[value]);
+          console.log("");
+        };
+      }
     }
   }
 

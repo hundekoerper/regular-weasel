@@ -13,6 +13,7 @@
   "dependencies": {
     "caniuse-db": "^1.0.30000331",
     "chalk": "^1.1.1",
-    "css": "^2.2.1"
+    "css": "^2.2.1",
+    "underscore": "^1.8.3"
   }
 }
