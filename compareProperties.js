@@ -3,8 +3,10 @@ var comepareProperties = function(usedproperties, database, profile) {
   var chalk = require('chalk')
   ,   _ = require('underscore')
   ,   versionConverter = require('./versionConverter')
+  ,   output = require('./output')
   ,   browser = []
   ,   matches = []
+  ,   versions = []
   ,   values = {}
   ,   temp = [];
 
@@ -38,7 +40,7 @@ var comepareProperties = function(usedproperties, database, profile) {
   matches = _.compact(matches);
   temp = [];
 
-  versionConverter(profile, database);
+  versions = versionConverter(profile, database);
 
   if (matches.length === 0){
     console.log("==================");
@@ -69,7 +71,7 @@ var comepareProperties = function(usedproperties, database, profile) {
 
       values = _.pick(database.data[matches[i][0]].stats, browser);
 
-
+      output(versions, values);
 
     }
   }

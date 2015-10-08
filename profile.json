@@ -3,19 +3,19 @@
   "browsers": {
     "ie" : 0,
     "edge": 0,
-    "firefox": 1,
+    "firefox": 0,
     "chrome": 0,
-    "safari": 1,
+    "safari": 0,
     "opera": 0,
-    "ios_saf": 6.0,
-    "op_mini": 6,
+    "ios_saf": 1,
+    "op_mini": 0,
     "android": 0,
     "bb": 0,
     "op_mob": 0,
-    "and_chr": 1,
+    "and_chr": 0,
     "and_ff": 0,
-    "ie_mob": 1,
+    "ie_mob": 0,
     "and_uc": 0
   },
-  "description": 1
+  "description": 0
 }
