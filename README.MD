@@ -1,4 +1,4 @@
-weasel
+regular-weasel
 -------
 use this tool to check your css file for compatibility issues with different
 webbrowsers. based on the amazing database from [caniuse](http://caniuse.com/).
@@ -7,7 +7,7 @@ USAGE
 -------
 ### install
 
-`npm install weasel`  
+`npm install reagular-weasel`  
 
 ### configure
 

@@ -1,7 +1,7 @@
 {
-  "name": "weasel",
+  "name": "reagular-weasel",
   "version": "1.0.0",
-  "bin": "./index.js",
+  "bin": { "weasel" : "./index.js"},
   "description": "check your css file for compatibility issues with different browsers.",
   "main": "index.js",
   "keywords": [

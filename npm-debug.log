@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.25
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /home/dan/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/home/dan/.npm/weasel/1.0.0/package.tgz', '.' ]
+11 verbose tarball /home/dan/.npm/weasel/1.0.0/package.tgz
+12 verbose folder .
+13 info prepublish weasel@1.0.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /home/dan/.npm/1f1177db-tar.lock
+16 silly lockFile ba6ec3dc-dan-npm-weasel-1-0-0-package-tgz tar:///home/dan/.npm/weasel/1.0.0/package.tgz
+17 verbose lock tar:///home/dan/.npm/weasel/1.0.0/package.tgz /home/dan/.npm/ba6ec3dc-dan-npm-weasel-1-0-0-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile ba6ec3dc-dan-npm-weasel-1-0-0-package-tgz tar:///home/dan/.npm/weasel/1.0.0/package.tgz
+21 silly lockFile ba6ec3dc-dan-npm-weasel-1-0-0-package-tgz tar:///home/dan/.npm/weasel/1.0.0/package.tgz
+22 silly lockFile b99f62ce-ome-dan-npm-weasel-1-0-0-package /home/dan/.npm/weasel/1.0.0/package
+23 verbose lock /home/dan/.npm/weasel/1.0.0/package /home/dan/.npm/b99f62ce-ome-dan-npm-weasel-1-0-0-package.lock
+24 silly lockFile b99f62ce-ome-dan-npm-weasel-1-0-0-package /home/dan/.npm/weasel/1.0.0/package
+25 silly lockFile b99f62ce-ome-dan-npm-weasel-1-0-0-package /home/dan/.npm/weasel/1.0.0/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'weasel',
+28 silly publish   version: '1.0.0',
+28 silly publish   bin: { weasel: './index.js' },
+28 silly publish   description: 'check your css file for compatibility issues with different browsers.',
+28 silly publish   main: 'index.js',
+28 silly publish   keywords: [ 'cssfile', 'compatibility', 'caniuse' ],
+28 silly publish   author: { name: 'Daniel Bechler' },
+28 silly publish   license: 'MIT',
+28 silly publish   dependencies:
+28 silly publish    { 'caniuse-db': '^1.0.30000331',
+28 silly publish      chalk: '^1.1.1',
+28 silly publish      css: '^2.2.1',
+28 silly publish      underscore: '^1.8.3' },
+28 silly publish   readme: 'weasel\n-------\nuse this tool to check your css file for compatibility issues with different\nwebbrowsers. based on the amazing database from [caniuse](http://caniuse.com/).\n\nUSAGE\n-------\n### install\n\n`npm install weasel`  \n\n### configure\n\n`use the profile.json to set the path to your css-file and choose which`  \n`browsers and versions you want to test for. optionally you can choose to`\n`display additional notes (recommended) and descriptions.`  \n\n### supported browsers:\n\nAndroid Browser (v2.1 - 44)  \nBlackberry Browser (v7 - 10)  \nChrome (v4 - 48)  \nChrome for Android (v44)  \nEdge (v12 - 13)  \nFireFox (v2 - 44)  \nFirefox for Android (v40)  \nInternet Explorer (v5.5 - 11)  \nIE Mobile (v10-11)  \nOpera (v9 - 34)  \nOpera Mini (v5.0 - 8.0)  \nOpera Mobile (v10 - 30)  \nSafari (v3.1 - 9)  \niOS Safari (v3.2 - 9)  \nUC Browser for Android (v9.9)  \n\n\nLICENSE\n-------\n\n> The MIT License\n>\n> Copyright (c) 2015 Daniel Bechler\n>\n> Permission is hereby granted, free of charge, to any person obtaining a copy\n> of this software and associated documentation files (the "Software"), to deal\n> in the Software without restriction, including without limitation the rights\n> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n> copies of the Software, and to permit persons to whom the Software is\n> furnished to do so, subject to the following conditions:\n>\n> The above copyright notice and this permission notice shall be included in\n> all copies or substantial portions of the Software.\n>\n> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n> THE SOFTWARE.\n',
+28 silly publish   readmeFilename: 'README.MD',
+28 silly publish   gitHead: '8e04c7dded6cf8f1de94ed507dee6feb46cb648f',
+28 silly publish   _id: 'weasel@1.0.0',
+28 silly publish   scripts: {},
+28 silly publish   _shasum: '41448e9e3e09ad7e64067da84595f98997e83ee2',
+28 silly publish   _from: '.' }
+29 verbose request where is /weasel
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id 5260fc6bc436161e
+32 verbose url raw /weasel
+33 verbose url resolving [ 'https://registry.npmjs.org/', './weasel' ]
+34 verbose url resolved https://registry.npmjs.org/weasel
+35 verbose request where is https://registry.npmjs.org/weasel
+36 info trying registry request attempt 1 at 01:31:33
+37 http PUT https://registry.npmjs.org/weasel
+38 http 403 https://registry.npmjs.org/weasel
+39 verbose headers { 'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=60',
+39 verbose headers   'content-length': '98',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Wed, 14 Oct 2015 23:31:34 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-fra1232-FRA',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1444865493.571245,VS0,VE1178' }
+40 error publish Failed PUT 403
+41 error Error: You do not have permission to publish 'weasel'. Are you logged in as the correct user? : weasel
+41 error     at RegClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:300:14)
+41 error     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:238:65)
+41 error     at Request.self.callback (/usr/lib/nodejs/request/index.js:148:22)
+41 error     at Request.EventEmitter.emit (events.js:98:17)
+41 error     at Request.<anonymous> (/usr/lib/nodejs/request/index.js:896:14)
+41 error     at Request.EventEmitter.emit (events.js:117:20)
+41 error     at IncomingMessage.<anonymous> (/usr/lib/nodejs/request/index.js:847:12)
+41 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+41 error     at _stream_readable.js:920:16
+41 error     at process._tickCallback (node.js:415:13)
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Linux 3.19.0-30-generic
+44 error command "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+45 error cwd /home/dan/Documents/GitHub/regular-weasel
+46 error node -v v0.10.25
+47 error npm -v 1.4.21
+48 verbose exit [ 1, true ]
