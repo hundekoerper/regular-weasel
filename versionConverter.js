@@ -118,15 +118,6 @@ var versionConverter = function (profile, database) {
     }
   }
 
-  for (var i = 0, x = versions.length; i < x; i++) {
-    if (!_.has(database.data["png-alpha"].stats[versions[i][0]],versions[i][1])){
-      console.log("==================");
-      console.log(chalk.red("you have selected an invalid version for " + versions[i][0]));
-      console.log("==================");
-      console.log("");
-    }
-  }
-
  return versions;
 
 };

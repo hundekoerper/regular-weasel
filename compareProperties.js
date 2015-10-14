@@ -4,6 +4,7 @@ var comepareProperties = function(usedproperties, database, profile) {
   ,   _ = require('underscore')
   ,   versionConverter = require('./versionConverter')
   ,   output = require('./output')
+  ,   compatibility = true
   ,   browser = []
   ,   matches = []
   ,   versions = []
@@ -32,7 +33,6 @@ var comepareProperties = function(usedproperties, database, profile) {
   }
 
   temp = _.uniq(temp);
-
   for (var i = 0, x = temp.length; i < x; i++) {
     delete matches[temp[i]];
   }
@@ -40,11 +40,25 @@ var comepareProperties = function(usedproperties, database, profile) {
   matches = _.compact(matches);
   temp = [];
 
+  for (var i = 0, x = matches.length; i < x; i++) {
+    values = _.pick(database.data[matches[i][0]].stats, browser);
+  }
+
+  temp = _.values(values);
+  for (var i = 0, x = temp.length; i < x; i++) {
+    for (var cbty in temp[i]) {
+      if(temp[i][cbty] !== "y") {
+        compatibility = false;
+      };
+    }
+  }
+  temp = [];
+
   versions = versionConverter(profile, database);
 
-  if (matches.length === 0){
+  if (matches.length === 0 || compatibility === true){
     console.log("==================");
-    console.log(chalk.green("there are no known compatibility issues in your css-file."));
+    console.log(chalk.green("there are no known compatibility issues with your css-file."));
     console.log("==================");
     console.log("");
   } else if (browser.length === 0){
@@ -69,8 +83,6 @@ var comepareProperties = function(usedproperties, database, profile) {
         console.log(database.data[matches[i][0]].description);
         console.log("");
       }
-
-      values = _.pick(database.data[matches[i][0]].stats, browser);
 
       output(versions, values);
 
