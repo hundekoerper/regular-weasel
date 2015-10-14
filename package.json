@@ -1,6 +1,7 @@
 {
   "name": "weasel",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "bin": "./index.js",
   "description": "check your css file for compatibility issues with different browsers.",
   "main": "index.js",
   "keywords": [
