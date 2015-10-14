@@ -62,6 +62,7 @@ var comepareProperties = function(usedproperties, database, profile) {
       console.log("Line: " + temp);
       console.log("==================");
       temp = [];
+
       if (profile.description === 1) {
         console.log(database.data[matches[i][0]].title);
         console.log("");
@@ -72,7 +73,6 @@ var comepareProperties = function(usedproperties, database, profile) {
       values = _.pick(database.data[matches[i][0]].stats, browser);
 
       output(versions, values);
-
 
       console.log("");
       if (profile.additional_notes === 1) {
