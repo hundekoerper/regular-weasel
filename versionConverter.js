@@ -42,9 +42,11 @@ var versionConverter = function (profile, database) {
         versions[i][1] = 9;
       };
       switch(versions[i][1]) {
-        case 9.5:
-        case 9.6:
-        versions[i][1] = "9.5-9.6";
+        case "9.5-9.6":
+        versions[i][1] = 9.5;
+        break;
+        case "10.0-10.1":
+        versions[i][1] = 10.0;
         break;
       };
       break;
@@ -53,31 +55,23 @@ var versionConverter = function (profile, database) {
         versions[i][1] = 3.2;
       };
       switch(versions[i][1]) {
-        case 4.0:
-        case 4.1:
-        versions[i][1] = "4.0-4.1";
+        case "4.0-4.1":
+        versions[i][1] = 4;
         break;
-        case 4.2:
-        case 4.3:
-        versions[i][1] = "4.2-4.3";
+        case "4.2-4.3":
+        versions[i][1] = 4.2;
         break;
-        case 5.0:
-        case 5.1:
-        versions[i][1] = "5.0-5.1";
+        case "5.0-5.1":
+        versions[i][1] = 5;
         break;
-        case 6.0:
-        case 6.1:
-        versions[i][1] = "6.0-6.1";
+        case "6.0-6.1":
+        versions[i][1] = 6;
         break;
-        case 7.0:
-        case 7.1:
-        versions[i][1] = "7.0-7.1";
+        case "7.0-7.1":
+        versions[i][1] = 7;
         break;
-        case 8.1:
-        case 8.2:
-        case 8.3:
-        case 8.4:
-        versions[i][1] = "8.1-8.4";
+        case "8.1-8.4":
+        versions[i][1] = 8.1;
         break;
       };
       break;
@@ -86,18 +80,16 @@ var versionConverter = function (profile, database) {
         versions[i][1] = 2.1;
       };
       switch(versions[i][1]) {
-        case 4.2:
-        case 4.3:
-        versions[i][1] = "4.2-4.3";
+        case "4.2-4.3":
+        versions[i][1] = 4.2;
         break;
-        case "4.4.3":
-        case "4.4.4":
-        versions[i][1] = "4.4.3-4.4.4";
+        case "4.4.3-4.4.4":
+        versions[i][1] = 4.43;
         break;
       };
       break;
       case "op_mini":
-      versions[i][1] = "5.0-8.0"
+      versions[i][1] = 5
       break;
       case "bb":
       if (versions[i][1] < 7 ) {
