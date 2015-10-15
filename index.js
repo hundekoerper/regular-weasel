@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var fs = require("fs")
     database = require("./node_modules/caniuse-db/data.json")
 ,   readProperties = require ("./readProperties")

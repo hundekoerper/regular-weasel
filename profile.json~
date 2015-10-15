@@ -1,0 +1,22 @@
+{
+  "filepath": "./example/example.css",
+  "browsers": {
+    "ie" : 0,
+    "edge": 0,
+    "firefox": 0,
+    "chrome": 0,
+    "safari": 0,
+    "opera": 0,
+    "ios_saf": 0,
+    "op_mini": 0,
+    "android": 0,
+    "bb": 0,
+    "op_mob": 0,
+    "and_chr": 0,
+    "and_ff": 0,
+    "ie_mob": 0,
+    "and_uc": 0
+  },
+  "description": 0,
+  "additional_notes": 1
+}

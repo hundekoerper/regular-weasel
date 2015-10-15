@@ -7,13 +7,17 @@ USAGE
 -------
 ### install
 
-`npm install reagular-weasel`  
+`npm install -g regular-weasel`  
 
 ### configure
 
 `use the profile.json to set the path to your css-file and choose which`  
 `browsers and versions you want to test for. optionally you can choose to`
 `display additional notes (recommended) and descriptions.`  
+
+### run
+
+`weasel`  
 
 ### supported browsers:
 
