@@ -1,7 +1,7 @@
 var versionConverter = function (profile, database) {
 
-  var chalk = require('chalk')
-  ,   _ = require('underscore')
+  var chalk = require("chalk")
+  ,   _ = require("underscore")
   ,   versions = [];
 
   for (var bsr in profile.browsers) {

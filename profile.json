@@ -1,5 +1,6 @@
 {
-  "filepath": "./example/example.css",
+  "filepath": "/example/given.css",
+  "read_from_json": 0,
   "browsers": {
     "ie" : 0,
     "edge": 0,

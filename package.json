@@ -1,7 +1,9 @@
 {
   "name": "regular-weasel",
   "version": "1.0.1",
-  "bin": { "weasel" : "./index.js"},
+  "bin": {
+    "weasel": "./index.js"
+  },
   "description": "check your css file for compatibility issues with different browsers.",
   "main": "index.js",
   "keywords": [
@@ -15,6 +17,7 @@
     "caniuse-db": "^1.0.30000331",
     "chalk": "^1.1.1",
     "css": "^2.2.1",
+    "minimist": "^1.2.0",
     "underscore": "^1.8.3"
   }
 }

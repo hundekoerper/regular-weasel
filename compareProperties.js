@@ -1,9 +1,9 @@
 var comepareProperties = function(usedproperties, database, profile) {
 
-  var chalk = require('chalk')
-  ,   _ = require('underscore')
-  ,   versionConverter = require('./versionConverter')
-  ,   output = require('./output')
+  var chalk = require("chalk")
+  ,   _ = require("underscore")
+  ,   versionConverter = require("./versionConverter")
+  ,   output = require("./output")
   ,   compatibility = true
   ,   browser = []
   ,   matches = []
@@ -56,14 +56,14 @@ var comepareProperties = function(usedproperties, database, profile) {
 
   versions = versionConverter(profile, database);
 
-  if (matches.length === 0 || compatibility === true){
-    console.log("==================");
-    console.log(chalk.green("there are no known compatibility issues with your css-file."));
-    console.log("==================");
-    console.log("");
-  } else if (browser.length === 0){
+  if (browser.length === 0){
     console.log("==================");
     console.log(chalk.yellow("please select at least one browser in the profile.json."));
+    console.log("==================");
+    console.log("");
+  } else if (matches.length === 0 || compatibility === true){
+    console.log("==================");
+    console.log(chalk.green("there are no known compatibility issues with your css-file."));
     console.log("==================");
     console.log("");
   } else {
