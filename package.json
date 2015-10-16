@@ -1,6 +1,6 @@
 {
   "name": "regular-weasel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "weasel": "./index.js"
   },
