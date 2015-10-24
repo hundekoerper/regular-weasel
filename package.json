@@ -2,7 +2,7 @@
   "name": "regular-weasel",
   "version": "1.0.2",
   "bin": {
-    "weasel": "./lib/index.js"
+    "weasel": "./cli.js"
   },
   "description": "check your css file for compatibility issues with different browsers.",
   "main": "lib/index.js",
