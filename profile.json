@@ -2,10 +2,10 @@
   "filepath": "/example/given.css",
   "read_from_json": 0,
   "browsers": {
-    "ie" : 0,
+    "ie" : 8,
     "edge": 0,
-    "firefox": 0,
-    "chrome": 0,
+    "firefox": 3,
+    "chrome": 48,
     "safari": 0,
     "opera": 0,
     "ios_saf": 0,
