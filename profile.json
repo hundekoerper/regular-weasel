@@ -1,11 +1,11 @@
 {
   "filepath": "/example/given.css",
-  "read_from_json": 0,
+  "read_from_json": false,
   "browsers": {
-    "ie" : 8,
+    "ie" : 0,
     "edge": 0,
-    "firefox": 3,
-    "chrome": 48,
+    "firefox": 0,
+    "chrome": 0,
     "safari": 0,
     "opera": 0,
     "ios_saf": 0,
@@ -18,6 +18,6 @@
     "ie_mob": 0,
     "and_uc": 0
   },
-  "description": 0,
-  "additional_notes": 1
+  "description": true,
+  "additional_notes": true
 }
