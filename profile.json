@@ -4,7 +4,7 @@
   "browsers": {
     "ie" : 0,
     "edge": 0,
-    "firefox": 0,
+    "firefox": 3,
     "chrome": 0,
     "safari": 0,
     "opera": 0,
