@@ -1,5 +1,7 @@
 regular-weasel
 -------
+[![Build Status](https://travis-ci.org/hundekoerper/regular-weasel.svg?branch=master)](https://travis-ci.org/hundekoerper/regular-weasel)
+
 use this tool to check your css file for compatibility issues with different
 webbrowsers. based on the amazing database from [caniuse](http://caniuse.com/).
 
