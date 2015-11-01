@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-var weasel = require('./lib/index.js')
+var weasel = require('./lib/index')
 ,   fs = require('fs')
 ,   _ = require('underscore')
 ,   profile = require('./profile.json')
 ,   argv = require('minimist')(process.argv.slice(2))
 ,   chalk = require('chalk');
 
-if (!profile.read_from_json) {
+if (!profile.path_from_json) {
   profile.filepath = argv._[0];
 }
 
