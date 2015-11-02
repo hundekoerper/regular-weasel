@@ -62,6 +62,8 @@ function compatKeyToString(compatKey) {
       return chalk.cyan('Requires prefix to work');
     case 'd':
       return chalk.yellow('Disabled by default (need to enable flag or something)');
+    default:
+      throw new Error('unknown compatKey "' + compatKey + '"');
   }
 }
 
