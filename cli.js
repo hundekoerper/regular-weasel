@@ -7,8 +7,9 @@ var weasel = require('./lib/index')
 ,   argv = require('minimist')(process.argv.slice(2))
 ,   chalk = require('chalk');
 
-if (!profile.path_from_json) {
-  profile.filepath = argv._[0];
+if (argv._[0] === undefined) {
+  console.error(chalk.red('please specify the filepath to your css-file'));
+  process.exit(1);
 }
 
 function browserKeyToName(browserKey) {
@@ -72,12 +73,11 @@ function exit(err) {
   process.exit(1);
 }
 
-fs.readFile(profile.filepath, 'utf-8', function(err, contents){
+fs.readFile(argv._[0], 'utf-8', function(err, contents){
   if (err) {
     exit(err);
   }
 
-  delete profile.filepath;
 
   try {
     var compatibility = weasel(profile, contents);

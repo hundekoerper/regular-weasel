@@ -15,16 +15,11 @@ USAGE
 
 `use the profile.json to choose which browsers and versions you want to test for.`
 `optionally you can choose to display additional notes (recommended) and`
-`descriptions. you are also able to set a path to your css-file, which will be`
-`used when you set "path_from_json" to true.`
+`descriptions.`
 
 ### run
 
-`weasel /path/to/your/cssfile.css`  
-
-or with "path_from_json" set to true:
-
-`weasel`  
+`weasel /path/to/your/file.css`   
 
 ### supported browsers:
 
