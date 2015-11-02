@@ -16,7 +16,7 @@ describe('Linter', function() {
     });
 
     it('should return false if indicator does not start with a "y"', function() {
-      var testString = 'lol';
+      var testString = 'swag';
       expect(Linter.prototype.isUsable(testString)).toBe(false);
     });
   });
@@ -121,15 +121,15 @@ describe('Linter', function() {
       ,   caniuseRange = 'droelf'
       ,   targetVersion = {}
       ,   canIUsefoozilla = {
-            'droelf': 'y'
-          }
+        'droelf': 'y'
+      }
       ,   browserKey = 'foozilla'
       ,   propertyName = {}
       ,   caniuseProp = {
-            stats: {
-              'foozilla': canIUsefoozilla
-            }
-          }
+        stats: {
+          'foozilla': canIUsefoozilla
+        }
+      }
       ,   lines = {}
       ,   forEachBrowserSpy = jasmine.createSpy('forEachBrowser')
       ,   forEachUsedPropertySpy = jasmine.createSpy('forEachUsedProperty')
@@ -169,14 +169,14 @@ describe('Linter', function() {
       ,   notesByNum = {}
       ,   lines = {}
       ,   canNotUseEntry = Linter.prototype.createCanNotUseEntry({
-            caniuseProp: {
-              notes: notes,
-              title: title,
-              description: description,
-              'notes_by_num': notesByNum
-            },
-            lines: lines
-          });
+        caniuseProp: {
+          notes: notes,
+          title: title,
+          description: description,
+          'notes_by_num': notesByNum
+        },
+        lines: lines
+      });
 
       expect(canNotUseEntry.notes).toBe(notes);
       expect(canNotUseEntry.title).toBe(title);
@@ -185,6 +185,27 @@ describe('Linter', function() {
       expect(canNotUseEntry.lines).toBe(lines);
       expect(canNotUseEntry.incompatibleBrowsers).toEqual({});
     });
+  });
+
+  describe('addIncompatibleBrowsers method', function() {
+    it('should add incompatible browsers to the canNotUseEntry object', function() {
+      var testcanNotUseObject = { incompatibleBrowsers: {}}
+      ,   testintersectionObject = {
+        caniuseIndicator: 'y',
+        caniuseRange: 'droelf',
+        browserKey: 'foozilla'
+      };
+      Linter.prototype.addIncompatibleBrowsers(testcanNotUseObject, testintersectionObject);
+      expect(testcanNotUseObject.incompatibleBrowsers['foozilla']).toEqual({'droelf': 'y'});
+    });
+
+    it('should create browser entry does not exist if it doesnt exist yet', function() {
+      var testcanNotUseObject = { incompatibleBrowsers: {}}
+      ,   testintersectionObject = { browserKey: 'foozilla' };
+      Linter.prototype.addIncompatibleBrowsers(testcanNotUseObject, testintersectionObject);
+      expect(testcanNotUseObject.incompatibleBrowsers['foozilla']).not.toBeUndefined();
+    });
+
   });
 
 });
