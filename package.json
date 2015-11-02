@@ -14,8 +14,9 @@
   "scripts": {
     "test": "jasmine"
   },
-  "author": "Daniel Bechler",
-  "license": "MIT",
+  "engines": {
+    "node": ">= 4.2.1"
+  },
   "dependencies": {
     "caniuse-db": "^1.0.30000331",
     "chalk": "^1.1.1",
@@ -26,5 +27,7 @@
   },
   "devDependencies": {
     "jasmine": "^2.3.2"
-  }
+  },
+  "author": "Daniel Bechler",
+  "license": "MIT"
 }
