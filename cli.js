@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 
 var weasel = require('./lib/index')
+,   path = require('path')
 ,   fs = require('fs')
 ,   _ = require('underscore')
 ,   findup = require('findup')
 ,   argv = require('minimist')(process.argv.slice(2))
 ,   chalk = require('chalk')
+,   startdir
 ,   profile;
 
 if (argv._[0] === undefined) {
@@ -13,8 +15,10 @@ if (argv._[0] === undefined) {
   process.exit(1);
 }
 
+startdir = path.dirname(path.resolve(argv._[0]));
+
 try{
-  profile = require(findup.sync(__dirname + '/f/e/d/c/b/a', 'profile.json') + '/profile.json');
+  profile = require(findup.sync(startdir + '/f/e/d/c/b/a', 'profile.json') + '/profile.json');
 }catch(e){
   console.error(chalk.red('no profile.json found'))
   process.exit(1);
