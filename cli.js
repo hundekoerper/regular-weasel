@@ -3,12 +3,20 @@
 var weasel = require('./lib/index')
 ,   fs = require('fs')
 ,   _ = require('underscore')
-,   profile = require('./profile.json')
+,   findup = require('findup')
 ,   argv = require('minimist')(process.argv.slice(2))
-,   chalk = require('chalk');
+,   chalk = require('chalk')
+,   profile;
 
 if (argv._[0] === undefined) {
   console.error(chalk.red('please specify the filepath to your css-file'));
+  process.exit(1);
+}
+
+try{
+  profile = require(findup.sync(__dirname + '/f/e/d/c/b/a', 'profile.json') + '/profile.json');
+}catch(e){
+  console.error(chalk.red('no profile.json found'))
   process.exit(1);
 }
 
