@@ -23,4 +23,10 @@ describe('normalizeVersion', function() {
     var testVersion = '1';
     expect(normalizeVersion(testVersion)).toBe(testVersion + '.0.0');
   });
+
+  it('should convert integer to string', function() {
+    var testVersion = 1337;
+    expect(normalizeVersion(testVersion)).toBe('1337.0.0');
+  });
+
 });
