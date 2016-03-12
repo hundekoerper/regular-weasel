@@ -31,6 +31,10 @@
   "devDependencies": {
     "jasmine": "^2.3.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hundekoerper/regular-weasel.git"
+  },
   "author": "Daniel Bechler",
   "license": "MIT"
 }
